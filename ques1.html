@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ques1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#but").click(()=>{
+                console.log("am in");
+                $("#t").css("color","black");
+                $("#f").hide();
+                $("#f1").hide();
+                $("#f2").hide();
+            });
+            $("#reset").click(()=>{
+                $("#f").show();
+                $("#f1").show();
+                $("#f2").show();
+                $("#t").css("color","black");
+            })
+            $("#but2").click(()=>{
+                console.log("am in");
+                $("#a2").css("color","black");
+                $("#a1").hide();
+                $("#a3").hide();
+                $("#a4").hide();
+            });
+            $("#reset2").click(()=>{
+                $("#a1").show();
+                $("#a4").show();
+                $("#a3").show();
+                $("#ta2").css("color","black");
+            })
+            $("#but3").click(()=>{
+                console.log("am in");
+                $("#b4").css("color","black");
+                $("#b1").hide();
+                $("#b3").hide();
+                $("#b2").hide();
+            });
+            $("#reset3").click(()=>{
+                $("#b3").show();
+                $("#b1").show();
+                $("#b2").show();
+                $("#b4").css("color","black");
+            })
+            $("#but4").click(()=>{
+                console.log("am in");
+                $("#c1").css("color","black");
+                $("#c4").hide();
+                $("#c3").hide();
+                $("#c2").hide();
+            });
+            $("#reset4").click(()=>{
+                $("#c4").show();
+                $("#c3").show();
+                $("#c2").show();
+                $("#c1").css("color","black");
+            })
+            $("#but5").click(()=>{
+                console.log("am in");
+                $("#d1").css("color","black");
+                $("#d4").hide();
+                $("#d3").hide();
+                $("#d2").hide();
+            });
+            $("#reset5").click(()=>{
+                $("#d4").show();
+                $("#d3").show();
+                $("#d2").show();
+                $("#d1").css("color","black");
+            })
+        });
+    </script>
+</head>
+<body>
+    <h1 style="text-align: center;">QUIZ</h1>
+
+    <h3>Q1. What is Ivan's favourite color ?</h3>
+    <p id="f">1. Blue </p>
+    <p id="f2">2. Green </p>
+    <p id="t">3. Red </p>
+    <p id="f1">4. Yellow </p>
+    <button type="submit" id="but">Show Answer</button>
+    <button type="submit" id="reset">Reset</button>
+
+    <h3>Q2. What is Ivan's favourite food ?</h3>
+    <p id="a1">1.  Chinese</p>
+    <p id="a2">2. Continental </p>
+    <p id="a3">3. South Indian</p>
+    <p id="a4">4. Thai</p>
+    <button type="submit" id="but2">Show Answer</button>
+    <button type="submit" id="reset2">Reset</button>
+
+    <h3>Q3. What is Ivan's age ?</h3>
+    <p id="b4">1. 22 </p>
+    <p id="b2">2. 20 </p>
+    <p id="b3">3. 19 </p>
+    <p id="b1">4. 21 </p>
+    <button type="submit" id="but3">Show Answer</button>
+    <button type="submit" id="reset3">Reset</button>
+
+    <h3>Q4. What is Ivan's favourite sport ?</h3>
+    <p id="c4">1. Badminton </p>
+    <p id="c3">2. Cricket </p>
+    <p id="c1">3. Football </p>
+    <p id="c2">4. Basketball </p>
+    <button type="submit" id="but4">Show Answer</button>
+    <button type="submit" id="reset4">Reset</button>
+
+    <h3>Q5. What is Ivan's favourite destination?</h3>
+    <p id="d4">1. Paris</p>
+    <p id="d3">2. NewYork </p>
+    <p id="d2">3. Greece </p>
+    <p id="d1">4. Switzerland </p>
+    <button type="submit" id="but5">Show Answer</button>
+    <button type="submit" id="reset5">Reset</button>
+</body>
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read json data using getJSON() Demo</title>
+    <style>
+        table {
+            margin: 0 auto;
+            font-size: large;
+            border: 1px solid black;
+        }
+        h1 {
+            text-align: center;
+            color: #006600;
+            font-size: xx-large;
+            font-family: 'Gill Sans',
+                'Gill Sans MT', 'Calibri',
+                'Trebuchet MS', 'sans-serif';
+        }
+        td {
+            background-color: khaki;
+            border: 1px solid black;
+        }
+        th,
+        td {
+            font-weight: bold;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        td {
+            font-weight: lighter;
+        }
+    </style>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //fetch json data from open api
+            $.getJSON("https://github.com/dotnet-presentations/ContosoCrafts/blob/master/src/wwwroot/data/product.json",function(Result){
+                var product='';
+                //iterate in json array of Objects
+                $.each(Result,function(key,value)
+                {
+                    product+='<tr>';
+                    product+='<td>' + value.Id + '</td>';
+                    product+='<td>' + value.Maker + '</td>';
+                    product+='<td>' + value.img + '</td>';
+                    product+='<td>' + value.Url + '</td>';
+                    product+='<td>' + value.Title + '</td>';
+                    product+='<td>' + value.Description + '</td>';
+                    product+='<td>' + value.Ratings + '</td>';
+                    product+='</tr>';
+                });
+                //inserting rows into table
+                $('#table').append(product);
+            })
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>JQuery Code to load the following .json document & display in table with css</h1>
+        <table id='table'>
+            <tr>
+                <th>Id</th>
+                <th>Maker</th>
+                <th>img</th>
+                <th>Url</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Ratings</th>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <div align="center"><a href="https://github.com/dotnet-presentations/ContosoCrafts/blob/master/src/wwwroot/data/product.json">Data Sourced from Product</a></div>
+    </div>
+</body>
+</html>
